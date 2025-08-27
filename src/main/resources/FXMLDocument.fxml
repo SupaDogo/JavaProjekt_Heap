@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.main.FXMLController">
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="111.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="odebratBtn" layoutX="14.0" layoutY="49.0" mnemonicParsing="false" onAction="#Odebrat" text="OdebratMax" />
+            <Button fx:id="importBtn" layoutX="30.0" layoutY="14.0" mnemonicParsing="false" onAction="#Import" text="Import" />
+            <Button fx:id="vlozitBtn" layoutX="33.0" layoutY="85.0" mnemonicParsing="false" onAction="#Vlozit" text="Vložit" />
+            <Button fx:id="generovatBtn" layoutX="20.0" layoutY="118.0" mnemonicParsing="false" onAction="#Generovat" text="Generovat" />
+            <Button fx:id="exportBtn" layoutX="19.0" layoutY="153.0" mnemonicParsing="false" onAction="#Exportovat" text="Exportovat" />
+            <ChoiceBox fx:id="prioritaChoiceBox" layoutX="14.0" layoutY="197.0" prefHeight="25.0" prefWidth="88.0" />
+            <Button fx:id="reorganizaceBtn" layoutX="19.0" layoutY="237.0" mnemonicParsing="false" onAction="#Reorganizace" text="Reorganizuj" />
+            <Button fx:id="zpristupniMaxBtn" layoutX="11.0" layoutY="272.0" mnemonicParsing="false" onAction="#zpristupniMax" text="Zpristupni max" />
+         </children></AnchorPane>
+    </right>
+    <bottom>
+        <AnchorPane prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="importovanoLabel" layoutX="7.0" layoutY="7.0" text="Importováno obcí: " />
+            <ChoiceBox fx:id="typPruchoduChoiceBox" layoutX="471.0" layoutY="15.0" prefHeight="25.0" prefWidth="115.0" />
+            <Button fx:id="vymazatBtn" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#VymazatVse" text="Vymazat vše" />
+         </children></AnchorPane>
+    </bottom>
+    <center>
+        <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
